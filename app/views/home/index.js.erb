@@ -1,5 +1,7 @@
 <% if user_logged_in? %>
-  $('#main').html("<%= escape_javascript(render partial: 'home/main') %>");
+  $("#main_section").show();
+  $("#login_section").hide();
 <% else %>
-  $('#main').html("<%= escape_javascript(render partial: 'home/login') %>");
+  $("#main_section").hide();
+  $("#login_section").show();
 <% end %>

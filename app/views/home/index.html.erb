@@ -1,5 +1,2 @@
-<% if user_logged_in? %>
-  <%= render 'main' %>
-<% else %>
-  <%= render 'login' %>
-<% end %>
+<%= render partial: 'login' %>
+<%= render partial: 'main' %>

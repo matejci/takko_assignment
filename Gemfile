@@ -24,6 +24,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'dotenv-rails'
 gem 'faraday'
+# gem 'geocoder'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

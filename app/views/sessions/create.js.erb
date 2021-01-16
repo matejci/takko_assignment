@@ -7,7 +7,9 @@
   };
 
   sessionStorage.setItem('user_data', JSON.stringify(user_data));
-  $('#main').html("<%= escape_javascript(render partial: 'home/main') %>");
+  $("#login_section").hide();
+  $("#main_section").show();
+
 <% else %>
   $('#flash_messages').html('Please check your credentials').addClass('error').fadeOut(5000);
 <% end %>

@@ -25,6 +25,6 @@ class Api::V1::SessionsController < ApplicationController
 
   def json_response
     @user ? (render json: @user, except: %i[password_digest created_at updated_at], status: :ok) :
-            (render json: { message: 'Wrong credentials' }, status: :bad_request)
+      (render json: { message: 'Wrong credentials' }, status: :bad_request)
   end
 end
