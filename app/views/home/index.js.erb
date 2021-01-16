@@ -1,0 +1,5 @@
+<% if user_logged_in? %>
+  $('#main').html("<%= escape_javascript(render partial: 'home/main') %>");
+<% else %>
+  $('#main').html("<%= escape_javascript(render partial: 'home/login') %>");
+<% end %>

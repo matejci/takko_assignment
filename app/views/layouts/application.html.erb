@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TakkoApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <div class="header">
+            <%= link_to('Home', root_path, id: 'home_btn') %> |
+            <hr>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div id="flash_messages">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="main" class="container-fluid">
+      <%= yield %>
+    </div>
+  </body>
+</html>

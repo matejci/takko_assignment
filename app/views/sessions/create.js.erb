@@ -1,0 +1,13 @@
+<% if @user %>
+  var user_data = {
+    api_token: '<%= @user.api_token %>',
+    email: '<%= @user.email %>',
+    name: '<%= @user.name %>',
+    token_expires_at: '<%= @user.token_expires_at %>'
+  };
+
+  sessionStorage.setItem('user_data', JSON.stringify(user_data));
+  $('#main').html("<%= escape_javascript(render partial: 'home/main') %>");
+<% else %>
+  $('#flash_messages').html('Please check your credentials').addClass('error').fadeOut(5000);
+<% end %>
