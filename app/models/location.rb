@@ -15,11 +15,14 @@ class Location
   field :longitude, type: String
 
   # associations
-  has_and_belongs_to_many :users
+  has_and_belongs_to_many :users, index: true
 
   # validations
-
   # callbacks
-
   # scopes
+
+  # fallback to default address
+  def default_address
+    formatted_address || attributes.slice(:street_name, :town, :state, :country, :postal_code).values.reject(&:blank?).join(', ')
+  end
 end

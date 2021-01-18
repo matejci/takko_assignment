@@ -1,0 +1,17 @@
+// clear login form
+$("#email").val('');
+$("#password").val('');
+
+// clear search form
+$("#address").val('');
+$("#postal_code").val('');
+$("#term").val('');
+
+// clear search results
+$("#search_results").html("");
+$("#search_results").hide();
+
+$("#main_section").hide();
+$("#login_section").show();
+
+$('#flash_messages').html('You are not authorized to see this page, or your session might be expired').attr('class', 'error').show().fadeOut(5000);

@@ -1,7 +1,13 @@
 <% if user_logged_in? %>
   $("#main_section").show();
   $("#login_section").hide();
+  $("#search_results").html('');
 <% else %>
   $("#main_section").hide();
+
+  // clear login form
+  $("#email").val('');
+  $("#password").val('');
+
   $("#login_section").show();
 <% end %>

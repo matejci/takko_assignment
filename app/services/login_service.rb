@@ -7,12 +7,20 @@ class LoginService
 
   def call
     process_login
+  rescue StandardError => e
+    Rails.logger.error("Error::LoginService: #{e.message}")
+    raise e
   end
 
   private
 
   def process_login
-    user = User.where(email: @params[:email].downcase).first # using #where, because I don't want to raise exception here if nothing is found
-    user&.authenticate(@params[:password])
+    user = User.find_by(email: @params[:email].downcase)
+
+    return false unless user.authenticate(@params[:password])
+
+    user.generate_new_token
+    user.save!
+    user
   end
 end

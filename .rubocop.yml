@@ -1,9 +1,6 @@
 AllCops:
   TargetRubyVersion: 2.7.1
 
-Rails:
-  Enabled: true
-
 Metrics/LineLength:
   Max: 150
 
@@ -27,4 +24,7 @@ Style/FrozenStringLiteralComment:
     - 'db/migrate/**/**'
 
 Style/Documentation:
+  Enabled: false
+
+Style/SingleArgumentDig:
   Enabled: false

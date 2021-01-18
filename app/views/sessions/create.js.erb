@@ -6,10 +6,11 @@
     token_expires_at: '<%= @user.token_expires_at %>'
   };
 
+  $('#flash_messages').html('Welcome ' + user_data['name']).attr('class', 'notice').show().fadeOut(2000);
   sessionStorage.setItem('user_data', JSON.stringify(user_data));
   $("#login_section").hide();
   $("#main_section").show();
 
 <% else %>
-  $('#flash_messages').html('Please check your credentials').addClass('error').fadeOut(5000);
+  $('#flash_messages').html('Please check your credentials').attr('class', 'error').show().fadeOut(5000);
 <% end %>

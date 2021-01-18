@@ -1,0 +1,2 @@
+$("#search_results").html("<%= escape_javascript(render partial: 'restaurants/results', locals: { data: @data }) %>");
+$("#search_results").show();

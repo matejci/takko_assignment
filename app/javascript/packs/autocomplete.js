@@ -14,9 +14,6 @@ $(document).on('ready turbolinks:load', function() {
 
     var address_components = place.address_components;
 
-    $("#town").val(address_components[1]['long_name']);
-    $("#county").val(address_components[2]['long_name']);
-
     // sometimes postal_code is not returned by google api
     if (address_components[5]) {
       $("#postal_code").val(address_components[5]['long_name']);

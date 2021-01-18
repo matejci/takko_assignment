@@ -12,11 +12,14 @@ class User
   field :password_digest, type: String
   field :api_token, type: String
   field :token_expires_at, type: String
+  field :categories, type: Hash, default: {}
+
+  index({ email: 1 }, { unique: true, name: 'email_index' })
 
   has_secure_password
 
   # associations
-  has_and_belongs_to_many :locations
+  has_and_belongs_to_many :locations, index: true
 
   # validations
   validates :email, :name, presence: true
@@ -35,11 +38,11 @@ class User
 
   private
 
-
   def generate_api_token
     self.token_expires_at = 1.hour.from_now
+
     self.api_token = loop do
-      token = SecureRandom.urlsafe_base64
+      token = "#{SecureRandom.urlsafe_base64}#{Digest::SHA1.hexdigest([Time.now, rand].join)}"
       break token unless User.where(api_token: token).exists?
     end
   end
