@@ -14,9 +14,15 @@
 }
 
 .error {
-	background-color: red;
+  background-color: red;
 }
 
 .notice {
-	background-color: greenyellow;
+  background-color: greenyellow;
+}
+
+.image {
+  width: 30vw;
+  min-width: 100px;
+  padding: 10px;
 }

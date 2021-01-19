@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
   EMAIL = 'Email'
 
   rescue_from Mongoid::Errors::DocumentNotFound, with: :not_found
+  rescue_from SearchService::LocationNotSupported, with: :location_not_found
 
   before_action :authenticate_user, :destroy_session
   helper_method :current_user, :user_logged_in? # so it can be used inside views/helpers
@@ -66,6 +67,13 @@ class ApplicationController < ActionController::Base
     respond_to do |format|
       format.js { render 'errors/unauthorized.js.erb' }
       format.json { render json: { message: 'Token expired, or wrong credentials' }, status: :unauthorized }
+    end
+  end
+
+  def location_not_found
+    respond_to do |format|
+      format.js { render 'errors/location_not_supported.js.erb' }
+      format.json { render json: { message: 'Location not found' }, status: :unprocessable_entity }
     end
   end
 end

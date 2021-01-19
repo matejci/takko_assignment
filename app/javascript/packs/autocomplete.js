@@ -9,16 +9,16 @@ $(document).on('ready turbolinks:load', function() {
 
   function onPlaceChanged() {
     var place = this.getPlace();
-
-    // console.log(place);
-
     var address_components = place.address_components;
 
-    // sometimes postal_code is not returned by google api
-    if (address_components[5]) {
-      $("#postal_code").val(address_components[5]['long_name']);
+    if (address_components) {
+      address_components.forEach(function(item, index) {
+        var postal_code_index = item['types'].indexOf('postal_code');
+        if (postal_code_index != -1) {
+          $("#postal_code").val(item['long_name']);
+        }
+      });
     }
   }
-
   google.maps.event.addDomListener(window, 'load', initializeAutocomplete);
 });

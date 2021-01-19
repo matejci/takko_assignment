@@ -12,6 +12,7 @@ Rails.application.routes.draw do
       resource :session, only: :destroy
 
       post 'search', to: 'restaurants#search'
+      post 'preference', to: 'restaurants#preference'
     end
   end
 end

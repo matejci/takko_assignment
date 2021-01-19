@@ -4,6 +4,7 @@ $(document).on('ready turbolinks:load', function() {
   $('#home_btn').on('click', handleHomeBtn);
   $('#search_form').on('keypress', preventMainFormEnterSubmit);
   $('#search_btn').on('click', search);
+  $('body').on('click', '.see_more, .discard', handleSeeMoreDiscardBtns);
 });
 
 function handleHomeBtn(e) {
@@ -49,11 +50,43 @@ function search(e) {
     headers: prepareHeaders(),
     dataType: 'script',
     success: function(data, status, xhr) {
-      console.log(data, status, xhr);
+      // console.log(data, status, xhr);
     },
     error: function(jqXhr, textStatus, errorMessage) {
-      console.log("Error", error);
+      // console.log("Error", errorMessage);
       $('#flash_messages').html('Error: ' + errorMessage).attr('class', 'error').show().fadeOut(5000);
     }
   });
+}
+
+function handleSeeMoreDiscardBtns(e) {
+  e.preventDefault();
+
+  var element = $(e.currentTarget);
+  var categories = element.parent().siblings()[1].textContent;
+  var vote = element.hasClass('see_more');
+
+  var req_data = { categories: categories.replace("Categories: ", ""), vote: vote };
+
+  $.ajax({
+    url: element.data('url'),
+    data: req_data,
+    type: 'POST',
+    headers: prepareHeaders(),
+    dataType: 'script',
+    success: function(data, status, xhr) {
+      console.log(data, status, xhr);
+      if (!vote) {
+        var row = element.parents()[6];
+        $(row).hide(1400);
+      } else {
+        var win = window.open(element.data('redirect-to'), '_blank');
+        win.focus();
+      }
+    },
+    error: function(jqXhr, textStatus, errorMessage) {
+      console.log("Error", errorMessage);
+    }
+  });
+
 }

@@ -26,7 +26,7 @@ class YelpService
     end
 
     def prepare_location(user, params)
-      if params[:address].present?
+      if params[:address].present? || params[:postal_code].present?
         params.except(:term).values.reject(&:blank?).join(', ')
       else
         user.locations.first.default_address
