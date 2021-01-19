@@ -19,7 +19,7 @@
               <p class="card-text categories">Categories: <%= restaurant.categories.join(', ') %></p>
               <p class="card-text">Rating: <%= restaurant.rating %></p>
               <p class="card-text">Location: <%= restaurant.location.join(', ') %></p>
-              <p class="card-text">Distance: <%= restaurant.distance.round(2) %></p>
+              <p class="card-text">Distance: <%= format_distance(restaurant.distance) %></p>
               <p class="card-text">Review count: <%= restaurant.review_count %></p>
               <p class="card-text">Is closed: <%= restaurant.is_closed %></p>
               <p class="card-text">Price: <%= restaurant.price %></p>

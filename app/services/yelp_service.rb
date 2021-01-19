@@ -21,7 +21,8 @@ class YelpService
         sort_by: 'distance'
       }
 
-      req_params.merge(term: search_params[:term]) if search_params[:term].present?
+      req_params.merge!(term: search_params[:term]) if search_params[:term].present?
+      req_params.merge!(categories: search_params[:categories]) if search_params[:categories].present?
       req_params
     end
 

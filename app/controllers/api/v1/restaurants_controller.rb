@@ -13,12 +13,11 @@ module Api
       end
 
       def preference
-        byebug
         @data = UpdatePreferenceService.new(user: @current_user, params: preference_params).call
 
         respond_to do |format|
           format.js { head :ok }
-          format.json { render json: @data, status: :ok }
+          format.json { head :ok }
         end
       end
 

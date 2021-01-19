@@ -3,7 +3,7 @@
 class SearchService
   class LocationNotSupported < StandardError; end
 
-  Restaurant = Struct.new(:external_id, :name, :categories, :rating, :location, :coordinates, :distance, :review_count, :is_closed, :price, :url, :image)
+  Restaurant = Struct.new(:name, :categories, :rating, :location, :coordinates, :distance, :review_count, :is_closed, :price, :url, :image)
 
   def initialize(user:, params:)
     @user = user
@@ -22,7 +22,7 @@ class SearchService
   attr_reader :user, :params
 
   def search
-    yelp_results = YelpService.search(user: user, search_params: params)
+    yelp_results = YelpService.search(user: user, search_params: params.merge(categories: categories))
 
     raise LocationNotSupported unless yelp_results.status.to_s.starts_with?('2')
 
@@ -36,7 +36,6 @@ class SearchService
 
     businesses.each_with_object([]) do |business, restaurants|
       restaurant = Restaurant.new.tap do |r|
-        r.external_id = business.dig('id')
         r.name = business.dig('name')
         r.categories = business.dig('categories')&.map { |cat| cat['alias'] }
         r.rating = business.dig('rating')
@@ -52,5 +51,9 @@ class SearchService
 
       restaurants << restaurant
     end
+  end
+
+  def categories
+    @user.categories.sort_by { |_k, v| v }.reverse.to_h.keys.take(2).join(',')
   end
 end

@@ -75,7 +75,7 @@ function handleSeeMoreDiscardBtns(e) {
     headers: prepareHeaders(),
     dataType: 'script',
     success: function(data, status, xhr) {
-      console.log(data, status, xhr);
+      // console.log(data, status, xhr);
       if (!vote) {
         var row = element.parents()[6];
         $(row).hide(1400);
@@ -85,7 +85,7 @@ function handleSeeMoreDiscardBtns(e) {
       }
     },
     error: function(jqXhr, textStatus, errorMessage) {
-      console.log("Error", errorMessage);
+      // console.log("Error", errorMessage);
     }
   });
 
