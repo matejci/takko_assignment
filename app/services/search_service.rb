@@ -2,6 +2,7 @@
 
 class SearchService
   class LocationNotSupported < StandardError; end
+  TOP_CATEGORIES_COUNT = ENV.fetch('TOP_CATEGORIES_COUNT', 5)
 
   Restaurant = Struct.new(:name, :categories, :rating, :location, :coordinates, :distance, :review_count, :is_closed, :price, :url, :image)
 
@@ -54,6 +55,6 @@ class SearchService
   end
 
   def categories
-    @user.categories.sort_by { |_k, v| v }.reverse.to_h.keys.take(2).join(',')
+    @user.categories.sort_by { |_k, v| v }.reverse.to_h.keys.take(TOP_CATEGORIES_COUNT).join(',')
   end
 end

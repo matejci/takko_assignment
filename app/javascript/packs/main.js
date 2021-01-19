@@ -5,6 +5,7 @@ $(document).on('ready turbolinks:load', function() {
   $('#search_form').on('keypress', preventMainFormEnterSubmit);
   $('#search_btn').on('click', search);
   $('body').on('click', '.see_more, .discard', handleSeeMoreDiscardBtns);
+  $('#go_to_top_btn').on('click', handleTopBtn);
 });
 
 function handleHomeBtn(e) {
@@ -88,5 +89,9 @@ function handleSeeMoreDiscardBtns(e) {
       // console.log("Error", errorMessage);
     }
   });
+}
 
+function handleTopBtn(e) {
+  $('html, body').animate({ scrollTop: 0 }, 'slow');
+  return false;
 }
