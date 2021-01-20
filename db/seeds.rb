@@ -13,7 +13,8 @@ location = Location.first_or_create!(formatted_address: '892 ARLENE WAY, NOVATO,
                                      country: 'USA',
                                      postal_code: '94947-6915',
                                      latitude: '38.07623797858075',
-                                     longitude: '-122.55006206663573')
+                                     longitude: '-122.55006206663573',
+                                     location_type: 'seeded')
 
 user.locations << location
 

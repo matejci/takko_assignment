@@ -1,2 +1,2 @@
-$("#search_results").html("<%= escape_javascript(render partial: 'restaurants/results', locals: { data: @data }) %>");
+$("#search_results").html("<%= escape_javascript(render partial: 'restaurants/results', locals: { data: @search_results.dig(:data), message: @search_results.dig(:message) }) %>");
 $("#search_results").show();

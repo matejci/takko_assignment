@@ -1,15 +1,18 @@
-<% if @user %>
+<% if @login_results.try(:dig, :data) %>
+  <% user = @login_results.dig(:data) %>
   var user_data = {
-    api_token: '<%= @user.api_token %>',
-    email: '<%= @user.email %>',
-    name: '<%= @user.name %>',
-    token_expires_at: '<%= @user.token_expires_at %>'
+    api_token: '<%= user.api_token %>',
+    email: '<%= user.email %>',
+    name: '<%= user.name %>',
+    token_expires_at: '<%= user.token_expires_at %>'
   };
 
   $('#flash_messages').html('Welcome ' + user_data['name']).attr('class', 'notice').show().fadeOut(2000);
   sessionStorage.setItem('user_data', JSON.stringify(user_data));
   $("#login_section").hide();
   $("#main_section").show();
+
+  window.checkLocation('<%= api_locations_path(format: :js) %>');
 
 <% else %>
   $('#flash_messages').html('Please check your credentials').attr('class', 'error').show().fadeOut(5000);

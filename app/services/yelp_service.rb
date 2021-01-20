@@ -16,11 +16,10 @@ class YelpService
 
     def request_data(user, search_params)
       req_params = {
-        location: prepare_location(user, search_params),
         radius: RADIUS,
         sort_by: 'distance'
       }
-
+      req_params.merge!(prepare_location(user, search_params))
       req_params.merge!(term: search_params[:term]) if search_params[:term].present?
       req_params.merge!(categories: search_params[:categories]) if search_params[:categories].present?
       req_params
@@ -28,9 +27,12 @@ class YelpService
 
     def prepare_location(user, params)
       if params[:address].present? || params[:postal_code].present?
-        params.except(:term).values.reject(&:blank?).join(', ')
+        { location: params.except(:term).values.reject(&:blank?).join(', ') }
+      elsif user.locations.acquired.any?
+        location = user.locations.acquired.last
+        { latitude: location.latitude, longitude: location.longitude }
       else
-        user.locations.first.default_address
+        { location: user.locations.default.full_address }
       end
     end
 

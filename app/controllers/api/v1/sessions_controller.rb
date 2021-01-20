@@ -6,7 +6,7 @@ module Api
       skip_before_action :authenticate_user, only: :create
 
       def create
-        @user = LoginService.new(params: login_params).call
+        @login_results = LoginService.new(params: login_params).call
 
         respond_to do |format|
           format.js { render 'sessions/create.js.erb' }
@@ -26,8 +26,11 @@ module Api
       end
 
       def json_response
-        @user ? (render json: @user, except: %i[password_digest created_at updated_at], status: :ok) :
-                (render json: { message: 'Wrong credentials' }, status: :bad_request)
+        if @login_results&.dig(:data)
+          render json: @login_results.dig(:data), except: %i[password_digest location_ids created_at updated_at], status: :ok
+        else
+          render json: { message: 'Wrong credentials' }, status: :bad_request
+        end
       end
     end
   end

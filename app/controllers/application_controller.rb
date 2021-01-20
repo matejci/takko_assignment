@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
   EMAIL = 'Email'
 
   rescue_from Mongoid::Errors::DocumentNotFound, with: :not_found
+  rescue_from Mongoid::Errors::Validations, with: :unprocessable_entity
   rescue_from SearchService::LocationNotSupported, with: :location_not_found
 
   before_action :authenticate_user, :destroy_session
@@ -74,6 +75,13 @@ class ApplicationController < ActionController::Base
     respond_to do |format|
       format.js { render 'errors/location_not_supported.js.erb' }
       format.json { render json: { message: 'Location not found' }, status: :unprocessable_entity }
+    end
+  end
+
+  def unprocessable_entity(error)
+    respond_to do |format|
+      format.js { render 'errors/unprocessable_entity.js.erb', locals: { error: error&.problem } }
+      format.json { render json: { message: error.problem }, status: :unprocessable_entity }
     end
   end
 end

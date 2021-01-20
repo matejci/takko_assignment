@@ -16,9 +16,9 @@ class UpdatePreferenceService
   private
 
   def update_categories
-    categories_from_params = @params[:categories].split(', ')
+    return unless @params[:categories].present? && @params[:vote].in?(%w[false true])
 
-    categories_from_params.each do |cfp|
+    @params[:categories].split(', ').each do |cfp|
       if @user.categories.key?(cfp)
         @user.categories[cfp] += parse_vote
       else

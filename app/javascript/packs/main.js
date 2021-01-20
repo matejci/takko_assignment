@@ -95,3 +95,29 @@ function handleTopBtn(e) {
   $('html, body').animate({ scrollTop: 0 }, 'slow');
   return false;
 }
+
+function checkLocation(update_url) {
+  navigator.geolocation.getCurrentPosition(function(position) {
+    console.log("position", position);
+
+    $.ajax({
+      url: update_url,
+      data: { latitude: position['coords']['latitude'], longitude: position['coords']['longitude'], location_type: 'acquired' },
+      type: 'POST',
+      headers: prepareHeaders(),
+      dataType: 'script',
+      success: function(data, status, xhr) {
+        console.log('sucs', data, status, xhr);
+      },
+      error: function(jqXhr, textStatus, errorMessage) {
+        console.log("Error", errorMessage);
+        // $('#flash_messages').html('Error: ' + errorMessage).attr('class', 'error').show().fadeOut(5000);
+      }
+    });
+
+
+  }, function() {});
+}
+
+// 'export' function to be available from '*.erb.js' views
+window.checkLocation = checkLocation;

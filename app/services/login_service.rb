@@ -17,10 +17,11 @@ class LoginService
   def process_login
     user = User.find_by(email: @params[:email].downcase)
 
-    return false unless user.authenticate(@params[:password])
+    return unless user.authenticate(@params[:password])
 
     user.generate_new_token
     user.save!
-    user
+
+    { data: user }
   end
 end

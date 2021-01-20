@@ -33,9 +33,11 @@ class SearchService
   def parse_yelp_results(yelp_results)
     businesses = JSON.parse(yelp_results)&.dig('businesses')
 
-    return { data: [], message: 'No restaurants found. Please try other search terms or location' } if businesses.blank?
+    return { data: [], message: 'No restaurants found. Please try other search terms or location.' } if businesses.blank?
 
-    businesses.each_with_object([]) do |business, restaurants|
+    restaurants = []
+
+    businesses.each do |business|
       restaurant = Restaurant.new.tap do |r|
         r.name = business.dig('name')
         r.categories = business.dig('categories')&.map { |cat| cat['alias'] }
@@ -52,6 +54,8 @@ class SearchService
 
       restaurants << restaurant
     end
+
+    { data: restaurants, message: nil }
   end
 
   def categories

@@ -4,16 +4,16 @@ module Api
   module V1
     class RestaurantsController < ApplicationController
       def search
-        @data = SearchService.new(user: @current_user, params: search_params).call
+        @search_results = SearchService.new(user: @current_user, params: search_params).call
 
         respond_to do |format|
           format.js { render 'home/search.js.erb' }
-          format.json { render json: @data, status: :ok }
+          format.json { render json: @search_results.dig(:data), status: :ok }
         end
       end
 
       def preference
-        @data = UpdatePreferenceService.new(user: @current_user, params: preference_params).call
+        UpdatePreferenceService.new(user: @current_user, params: preference_params).call
 
         respond_to do |format|
           format.js { head :ok }
