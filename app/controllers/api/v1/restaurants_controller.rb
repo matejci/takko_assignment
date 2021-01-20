@@ -24,7 +24,7 @@ module Api
       private
 
       def search_params
-        params.permit(:term, :address, :postal_code)
+        params.permit(:term, :address, :postal_code, :radius)
       end
 
       def preference_params

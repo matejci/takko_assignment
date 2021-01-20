@@ -16,7 +16,7 @@ class YelpService
 
     def request_data(user, search_params)
       req_params = {
-        radius: RADIUS,
+        radius: radius(search_params),
         sort_by: 'distance'
       }
       req_params.merge!(prepare_location(user, search_params))
@@ -38,6 +38,11 @@ class YelpService
 
     def request_headers
       { 'Authorization': YELP_AUTH_HEADER }
+    end
+
+    def radius(search_params)
+      radius = search_params[:radius].presence || RADIUS
+      radius.to_i > 40_000 ? 40_000 : radius.to_i
     end
   end
 end
