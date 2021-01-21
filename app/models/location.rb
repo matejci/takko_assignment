@@ -31,10 +31,10 @@ class Location
   scope :default, -> { where(location_type: 'seeded') }
 
   def full_address
-    formatted_address || attributes.slice(:street_name, :town, :state, :country, :postal_code).values.reject(&:blank?).join(', ')
+    formatted_address || attributes.slice('street_name', 'town', 'state', 'country', 'postal_code').values.reject(&:blank?).join(' ')
   end
 
   def address_fields_empty?
-    formatted_address.blank? && street_name.blank? && town.blank? && county.blank? && state.blank? && country.blank? && postal_code.blank?
+    postal_code.blank? && formatted_address.blank? && street_name.blank? && town.blank? && county.blank? && state.blank? && country.blank?
   end
 end

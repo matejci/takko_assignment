@@ -17,7 +17,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'should not save user if email already exists' do
     user = create(:user, email: 'user@isp.net')
-    user2 = User.new(email: user.email)
+    user2 = build(:user, email: user.email)
     user2.valid?
     assert_match(/Email is already taken/, user2.errors.full_messages.to_sentence)
   end

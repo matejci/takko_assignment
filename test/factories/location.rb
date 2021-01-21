@@ -18,6 +18,12 @@ FactoryBot.define do
         lon { nil }
       end
 
+      formatted_address { nil }
+      street_name { nil }
+      town { nil }
+      state { nil }
+      country { nil }
+      postal_code { nil }
       location_type { 'acquired' }
       latitude { lat }
       longitude { lon }
