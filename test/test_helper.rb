@@ -7,6 +7,9 @@ require 'rails/test_help'
 require 'database_cleaner'
 require 'database_cleaner_support'
 
+require 'minitest/unit'
+require 'mocha/minitest'
+
 module ActiveSupport
   class TestCase
     include FactoryBot::Syntax::Methods
@@ -16,5 +19,12 @@ module ActiveSupport
 
     DatabaseCleaner[:mongoid].strategy = :truncation
     DatabaseCleaner.clean_with :truncation
+
+    Shoulda::Matchers.configure do |config|
+      config.integrate do |with|
+        with.test_framework :minitest
+        with.library :rails
+      end
+    end
   end
 end

@@ -42,6 +42,8 @@ end
 group :test do
   gem 'faker'
   gem 'database_cleaner-mongoid'
+  gem 'shoulda', '~> 4.0'
+  gem 'mocha'
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   gem 'webdrivers'
