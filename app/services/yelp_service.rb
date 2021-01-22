@@ -32,7 +32,7 @@ class YelpService
         location = user.locations.acquired.last
         { latitude: location.latitude, longitude: location.longitude }
       else
-        { location: user.locations.default.full_address }
+        { location: user.locations.default.first.full_address }
       end
     end
 

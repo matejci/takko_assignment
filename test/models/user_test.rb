@@ -18,10 +18,8 @@ class UserTest < ActiveSupport::TestCase
     assert_not(user.save)
   end
 
-  # sometimes it might happen that this test fails, not sure why, maybe it's because DB doesn't reload model at time??
   test 'should not save user if email already exists' do
-    email = @user.email
-    user = build(:user, email: email)
+    user = build(:user, email: @user.email)
     user.valid?
     assert_match(/Email is already taken/, user.errors.full_messages.to_sentence)
   end

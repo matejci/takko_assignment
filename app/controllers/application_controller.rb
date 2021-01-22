@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
 
   rescue_from Mongoid::Errors::DocumentNotFound, with: :not_found
   rescue_from Mongoid::Errors::Validations, with: :unprocessable_entity
-  rescue_from SearchService::LocationNotSupported, with: :location_not_found
+  rescue_from SearchService::LocationNotSupported, with: :external_service_error
 
   before_action :authenticate_user, :destroy_session
   helper_method :current_user, :user_logged_in? # so it can be used inside views/helpers
@@ -71,10 +71,10 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def location_not_found
+  def external_service_error
     respond_to do |format|
-      format.js { render 'errors/location_not_supported.js.erb' }
-      format.json { render json: { message: 'Location not found' }, status: :unprocessable_entity }
+      format.js { render 'errors/external_service_error.js.erb' }
+      format.json { render json: { message: 'External Service Error or Location unsupported' }, status: :unprocessable_entity }
     end
   end
 

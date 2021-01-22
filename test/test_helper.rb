@@ -6,7 +6,7 @@ require_relative '../config/environment'
 require 'rails/test_help'
 require 'database_cleaner'
 require 'database_cleaner_support'
-
+require 'webmock/minitest'
 require 'minitest/unit'
 require 'mocha/minitest'
 
@@ -15,7 +15,7 @@ module ActiveSupport
     include FactoryBot::Syntax::Methods
 
     # Run tests in parallel with specified workers
-    parallelize(workers: :number_of_processors)
+    # parallelize(workers: :number_of_processors)
 
     DatabaseCleaner[:mongoid].strategy = :truncation
     DatabaseCleaner.clean_with :truncation

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class SearchService
-  class LocationNotSupported < StandardError; end
+  class ExternalServiceError < StandardError; end
   TOP_CATEGORIES_COUNT = ENV.fetch('TOP_CATEGORIES_COUNT', 5)
 
   Restaurant = Struct.new(:name, :categories, :rating, :location, :coordinates, :distance, :review_count, :is_closed, :price, :url, :image)
@@ -25,7 +25,8 @@ class SearchService
   def search
     yelp_results = YelpService.search(user: user, search_params: params.merge(categories: categories))
 
-    raise LocationNotSupported unless yelp_results.status.to_s.starts_with?('2')
+    # TODO, this error is to generic, it should parse Yelp response and raise appropriate custom error
+    raise ExternalServiceError unless yelp_results.status.to_s.starts_with?('2')
 
     parse_yelp_results(yelp_results.body)
   end
