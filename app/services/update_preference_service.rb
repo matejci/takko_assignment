@@ -16,7 +16,8 @@ class UpdatePreferenceService
   private
 
   def update_categories
-    return unless @params[:categories].present? && @params[:vote].in?(%w[false true])
+    # In this case we won't panic (raise errors) if params are wrong, but we won't process...
+    return unless @params[:categories].present? && @params[:categories].is_a?(String) && @params[:vote].in?(%w[false true])
 
     @params[:categories].split(', ').each do |cfp|
       if @user.categories.key?(cfp)

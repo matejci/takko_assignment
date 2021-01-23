@@ -69,6 +69,13 @@ class UpdatePreferenceServiceTest < ActiveSupport::TestCase
         assert_equal(user_categories_before_service_call, @user.categories)
       end
 
+      should "return nil if value of categories param is wrong type and won't update categories preference" do
+        user_categories_before_service_call = @user.categories
+        service = UpdatePreferenceService.new(user: @user, params: { categories: true, vote: 'true' }).call
+        assert_nil(service)
+        assert_equal(user_categories_before_service_call, @user.categories)
+      end
+
       should "raise error if user's preference cannot be saved" do
         user = build(:user, name: '')
         assert_raises(Mongoid::Errors::Validations) do
