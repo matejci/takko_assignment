@@ -1,0 +1,902 @@
+{
+    "businesses": [
+        {
+            "id": "65DCX_3UcD0nIKXJWmfGug",
+            "alias": "red-boy-pizza-and-restaurant-ignacio-novato",
+            "name": "Red Boy Pizza & Restaurant Ignacio",
+            "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/4WO9qYxfp_u5Gs3Y3RjTLw/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/red-boy-pizza-and-restaurant-ignacio-novato?adjust_creative=g6GHAiWKHC12LNduHCT5KQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=g6GHAiWKHC12LNduHCT5KQ",
+            "review_count": 183,
+            "categories": [
+                {
+                    "alias": "italian",
+                    "title": "Italian"
+                },
+                {
+                    "alias": "pizza",
+                    "title": "Pizza"
+                }
+            ],
+            "rating": 3.5,
+            "coordinates": {
+                "latitude": 38.069071,
+                "longitude": -122.5410094
+            },
+            "transactions": [
+                "delivery",
+                "pickup"
+            ],
+            "price": "$$",
+            "location": {
+                "address1": "459 Entrada Dr",
+                "address2": "",
+                "address3": "",
+                "city": "Novato",
+                "zip_code": "94949",
+                "country": "US",
+                "state": "CA",
+                "display_address": [
+                    "459 Entrada Dr",
+                    "Novato, CA 94949"
+                ]
+            },
+            "phone": "+14153827711",
+            "display_phone": "(415) 382-7711",
+            "distance": 1142.97065259128
+        },
+        {
+            "id": "jii6n6U-6zYKAcliDPaUmw",
+            "alias": "boca-pizzeria-novato",
+            "name": "Boca Pizzeria",
+            "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/FFcMNeWHzyppTdgOSKcf3g/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/boca-pizzeria-novato?adjust_creative=g6GHAiWKHC12LNduHCT5KQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=g6GHAiWKHC12LNduHCT5KQ",
+            "review_count": 339,
+            "categories": [
+                {
+                    "alias": "pizza",
+                    "title": "Pizza"
+                }
+            ],
+            "rating": 3.5,
+            "coordinates": {
+                "latitude": 38.067496,
+                "longitude": -122.541828
+            },
+            "transactions": [
+                "delivery",
+                "restaurant_reservation",
+                "pickup"
+            ],
+            "price": "$$",
+            "location": {
+                "address1": "454 Ignacio Blvd",
+                "address2": "",
+                "address3": "",
+                "city": "Novato",
+                "zip_code": "94949",
+                "country": "US",
+                "state": "CA",
+                "display_address": [
+                    "454 Ignacio Blvd",
+                    "Novato, CA 94949"
+                ]
+            },
+            "phone": "+14158832302",
+            "display_phone": "(415) 883-2302",
+            "distance": 1207.3702257375842
+        },
+        {
+            "id": "WEs5gPYSeFXdjHTHY1HbLQ",
+            "alias": "costco-food-court-novato",
+            "name": "Costco Food Court",
+            "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/cLTsPFRjMMWWLGCUjudVag/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/costco-food-court-novato?adjust_creative=g6GHAiWKHC12LNduHCT5KQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=g6GHAiWKHC12LNduHCT5KQ",
+            "review_count": 15,
+            "categories": [
+                {
+                    "alias": "pizza",
+                    "title": "Pizza"
+                },
+                {
+                    "alias": "food_court",
+                    "title": "Food Court"
+                }
+            ],
+            "rating": 3.0,
+            "coordinates": {
+                "latitude": 38.087266,
+                "longitude": -122.550639
+            },
+            "transactions": [],
+            "price": "$",
+            "location": {
+                "address1": "300 Vintage Way",
+                "address2": "",
+                "address3": "",
+                "city": "Novato",
+                "zip_code": "94945",
+                "country": "US",
+                "state": "CA",
+                "display_address": [
+                    "300 Vintage Way",
+                    "Novato, CA 94945"
+                ]
+            },
+            "phone": "+14158991349",
+            "display_phone": "(415) 899-1349",
+            "distance": 1232.2808903318996
+        },
+        {
+            "id": "5Mm58WZFzrWbtXop9mylkg",
+            "alias": "mod-pizza-novato",
+            "name": "MOD Pizza",
+            "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/bmlHY721_U-6VGre5_gmSA/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/mod-pizza-novato?adjust_creative=g6GHAiWKHC12LNduHCT5KQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=g6GHAiWKHC12LNduHCT5KQ",
+            "review_count": 156,
+            "categories": [
+                {
+                    "alias": "hotdogs",
+                    "title": "Fast Food"
+                },
+                {
+                    "alias": "pizza",
+                    "title": "Pizza"
+                }
+            ],
+            "rating": 3.5,
+            "coordinates": {
+                "latitude": 38.0910921,
+                "longitude": -122.5562176
+            },
+            "transactions": [],
+            "price": "$",
+            "location": {
+                "address1": "140 Vintage Way",
+                "address2": null,
+                "address3": null,
+                "city": "Novato",
+                "zip_code": "94945",
+                "country": "US",
+                "state": "CA",
+                "display_address": [
+                    "140 Vintage Way",
+                    "Novato, CA 94945"
+                ]
+            },
+            "phone": "+16282037170",
+            "display_phone": "(628) 203-7170",
+            "distance": 1661.6885733868428
+        },
+        {
+            "id": "h-ebiiISTvkcwiANGS7oTg",
+            "alias": "extreme-pizza-novato-novato",
+            "name": "Extreme Pizza - Novato",
+            "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/QqLkLy0gFrDwNfmBKGpLFw/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/extreme-pizza-novato-novato?adjust_creative=g6GHAiWKHC12LNduHCT5KQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=g6GHAiWKHC12LNduHCT5KQ",
+            "review_count": 113,
+            "categories": [
+                {
+                    "alias": "pizza",
+                    "title": "Pizza"
+                },
+                {
+                    "alias": "salad",
+                    "title": "Salad"
+                },
+                {
+                    "alias": "sandwiches",
+                    "title": "Sandwiches"
+                }
+            ],
+            "rating": 3.5,
+            "coordinates": {
+                "latitude": 38.092434,
+                "longitude": -122.554339
+            },
+            "transactions": [
+                "delivery",
+                "pickup"
+            ],
+            "price": "$$",
+            "location": {
+                "address1": "104 Vintage Way",
+                "address2": "Ste A-9",
+                "address3": "",
+                "city": "Novato",
+                "zip_code": "94945",
+                "country": "US",
+                "state": "CA",
+                "display_address": [
+                    "104 Vintage Way",
+                    "Ste A-9",
+                    "Novato, CA 94945"
+                ]
+            },
+            "phone": "+14158986575",
+            "display_phone": "(415) 898-6575",
+            "distance": 1843.9319194867833
+        },
+        {
+            "id": "egyX78UkLtasUk4Qc_6j2Q",
+            "alias": "stefanos-pizza-novato-2",
+            "name": "Stefano's  Pizza",
+            "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/o0YRnB4nUs_K518lrDVUNw/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/stefanos-pizza-novato-2?adjust_creative=g6GHAiWKHC12LNduHCT5KQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=g6GHAiWKHC12LNduHCT5KQ",
+            "review_count": 118,
+            "categories": [
+                {
+                    "alias": "pizza",
+                    "title": "Pizza"
+                },
+                {
+                    "alias": "desserts",
+                    "title": "Desserts"
+                },
+                {
+                    "alias": "sandwiches",
+                    "title": "Sandwiches"
+                }
+            ],
+            "rating": 3.5,
+            "coordinates": {
+                "latitude": 38.0988585948944,
+                "longitude": -122.570693716407
+            },
+            "transactions": [
+                "delivery",
+                "pickup"
+            ],
+            "price": "$$",
+            "location": {
+                "address1": "1553 S Novato Blvd",
+                "address2": "",
+                "address3": "",
+                "city": "Novato",
+                "zip_code": "94947",
+                "country": "US",
+                "state": "CA",
+                "display_address": [
+                    "1553 S Novato Blvd",
+                    "Novato, CA 94947"
+                ]
+            },
+            "phone": "+14158784959",
+            "display_phone": "(415) 878-4959",
+            "distance": 3134.7652843203296
+        },
+        {
+            "id": "pwbI5QcgyVo4WY8aXWrJIA",
+            "alias": "mountain-mikes-pizza-novato",
+            "name": "Mountain Mike's Pizza",
+            "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/acANHa9yTKRkOLtcgi3NWg/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/mountain-mikes-pizza-novato?adjust_creative=g6GHAiWKHC12LNduHCT5KQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=g6GHAiWKHC12LNduHCT5KQ",
+            "review_count": 118,
+            "categories": [
+                {
+                    "alias": "pizza",
+                    "title": "Pizza"
+                },
+                {
+                    "alias": "sportsbars",
+                    "title": "Sports Bars"
+                },
+                {
+                    "alias": "venues",
+                    "title": "Venues & Event Spaces"
+                }
+            ],
+            "rating": 3.5,
+            "coordinates": {
+                "latitude": 38.100115,
+                "longitude": -122.571784
+            },
+            "transactions": [
+                "delivery",
+                "pickup"
+            ],
+            "price": "$$",
+            "location": {
+                "address1": "1561 S Novato Blvd",
+                "address2": "",
+                "address3": "",
+                "city": "Novato",
+                "zip_code": "94947",
+                "country": "US",
+                "state": "CA",
+                "display_address": [
+                    "1561 S Novato Blvd",
+                    "Novato, CA 94947"
+                ]
+            },
+            "phone": "+14158988800",
+            "display_phone": "(415) 898-8800",
+            "distance": 3268.2849632788793
+        },
+        {
+            "id": "Gcu48cUWtY9nCYDPvTL0UQ",
+            "alias": "round-table-pizza-novato-3",
+            "name": "Round Table Pizza",
+            "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/gD37T1WuA8N0aGeWiT9Qrg/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/round-table-pizza-novato-3?adjust_creative=g6GHAiWKHC12LNduHCT5KQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=g6GHAiWKHC12LNduHCT5KQ",
+            "review_count": 79,
+            "categories": [
+                {
+                    "alias": "pizza",
+                    "title": "Pizza"
+                },
+                {
+                    "alias": "buffets",
+                    "title": "Buffets"
+                }
+            ],
+            "rating": 2.5,
+            "coordinates": {
+                "latitude": 38.100078,
+                "longitude": -122.572617
+            },
+            "transactions": [
+                "delivery",
+                "pickup"
+            ],
+            "price": "$$",
+            "location": {
+                "address1": "1565 S Novato Blvd",
+                "address2": "",
+                "address3": "",
+                "city": "Novato",
+                "zip_code": "94947",
+                "country": "US",
+                "state": "CA",
+                "display_address": [
+                    "1565 S Novato Blvd",
+                    "Novato, CA 94947"
+                ]
+            },
+            "phone": "+14158972512",
+            "display_phone": "(415) 897-2512",
+            "distance": 3307.8684292075864
+        },
+        {
+            "id": "O_FLRoDZnPU755B_AbHGWg",
+            "alias": "papa-murphys-novato",
+            "name": "Papa Murphy's",
+            "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/pBhLzN9fpfbgywpjdwjbwA/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/papa-murphys-novato?adjust_creative=g6GHAiWKHC12LNduHCT5KQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=g6GHAiWKHC12LNduHCT5KQ",
+            "review_count": 36,
+            "categories": [
+                {
+                    "alias": "pizza",
+                    "title": "Pizza"
+                }
+            ],
+            "rating": 3.0,
+            "coordinates": {
+                "latitude": 38.1024809120147,
+                "longitude": -122.57163289587
+            },
+            "transactions": [],
+            "price": "$",
+            "location": {
+                "address1": "922 Diablo Avenue",
+                "address2": "Suite B",
+                "address3": "",
+                "city": "Novato",
+                "zip_code": "94947",
+                "country": "US",
+                "state": "CA",
+                "display_address": [
+                    "922 Diablo Avenue",
+                    "Suite B",
+                    "Novato, CA 94947"
+                ]
+            },
+            "phone": "+14158926999",
+            "display_phone": "(415) 892-6999",
+            "distance": 3478.554854935185
+        },
+        {
+            "id": "036sAGwE55TgfoZXHGhP5w",
+            "alias": "dominos-pizza-novato",
+            "name": "Domino's Pizza",
+            "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/5IjVtQpuSWUqHVXvCxY0Yw/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/dominos-pizza-novato?adjust_creative=g6GHAiWKHC12LNduHCT5KQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=g6GHAiWKHC12LNduHCT5KQ",
+            "review_count": 108,
+            "categories": [
+                {
+                    "alias": "pizza",
+                    "title": "Pizza"
+                },
+                {
+                    "alias": "chicken_wings",
+                    "title": "Chicken Wings"
+                },
+                {
+                    "alias": "sandwiches",
+                    "title": "Sandwiches"
+                }
+            ],
+            "rating": 1.5,
+            "coordinates": {
+                "latitude": 38.1044399,
+                "longitude": -122.57235
+            },
+            "transactions": [],
+            "price": "$",
+            "location": {
+                "address1": "975 Diablo Ave",
+                "address2": "Ste 102A",
+                "address3": "",
+                "city": "Novato",
+                "zip_code": "94947",
+                "country": "US",
+                "state": "CA",
+                "display_address": [
+                    "975 Diablo Ave",
+                    "Ste 102A",
+                    "Novato, CA 94947"
+                ]
+            },
+            "phone": "+14158785555",
+            "display_phone": "(415) 878-5555",
+            "distance": 3697.877662427506
+        },
+        {
+            "id": "kcBDcqoMnmDFNA2OeOI8bA",
+            "alias": "the-village-pizzeria-novato",
+            "name": "The Village Pizzeria",
+            "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/l7DZDHlPNDzyTMQRaBDyeA/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/the-village-pizzeria-novato?adjust_creative=g6GHAiWKHC12LNduHCT5KQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=g6GHAiWKHC12LNduHCT5KQ",
+            "review_count": 148,
+            "categories": [
+                {
+                    "alias": "italian",
+                    "title": "Italian"
+                },
+                {
+                    "alias": "pizza",
+                    "title": "Pizza"
+                }
+            ],
+            "rating": 4.0,
+            "coordinates": {
+                "latitude": 38.1083163,
+                "longitude": -122.5725471
+            },
+            "transactions": [
+                "delivery"
+            ],
+            "price": "$$",
+            "location": {
+                "address1": "1200 Grant Ave",
+                "address2": "",
+                "address3": "",
+                "city": "Novato",
+                "zip_code": "94945",
+                "country": "US",
+                "state": "CA",
+                "display_address": [
+                    "1200 Grant Ave",
+                    "Novato, CA 94945"
+                ]
+            },
+            "phone": "+14158982234",
+            "display_phone": "(415) 898-2234",
+            "distance": 4077.088292758556
+        },
+        {
+            "id": "Wp7XgkdLMdfgzBG8shAAvQ",
+            "alias": "little-caesars-pizza-pizza-novato",
+            "name": "Little Caesars Pizza Pizza",
+            "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/7mqKq6kWkKqNV5fGYAfjIA/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/little-caesars-pizza-pizza-novato?adjust_creative=g6GHAiWKHC12LNduHCT5KQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=g6GHAiWKHC12LNduHCT5KQ",
+            "review_count": 19,
+            "categories": [
+                {
+                    "alias": "pizza",
+                    "title": "Pizza"
+                }
+            ],
+            "rating": 2.0,
+            "coordinates": {
+                "latitude": 38.10748,
+                "longitude": -122.57755
+            },
+            "transactions": [
+                "delivery",
+                "pickup"
+            ],
+            "price": "$",
+            "location": {
+                "address1": "936 7th St",
+                "address2": "Ste M",
+                "address3": "",
+                "city": "Novato",
+                "zip_code": "94945",
+                "country": "US",
+                "state": "CA",
+                "display_address": [
+                    "936 7th St",
+                    "Ste M",
+                    "Novato, CA 94945"
+                ]
+            },
+            "phone": "+14158991111",
+            "display_phone": "(415) 899-1111",
+            "distance": 4225.822002207328
+        },
+        {
+            "id": "7u-8nSOyftRG8020H1RUIQ",
+            "alias": "big-rock-mini-mart-and-deli-san-rafael",
+            "name": "Big Rock Mini Mart & Deli",
+            "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/G2pdcjtFaFPCoZffxtIe7g/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/big-rock-mini-mart-and-deli-san-rafael?adjust_creative=g6GHAiWKHC12LNduHCT5KQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=g6GHAiWKHC12LNduHCT5KQ",
+            "review_count": 49,
+            "categories": [
+                {
+                    "alias": "grocery",
+                    "title": "Grocery"
+                },
+                {
+                    "alias": "delis",
+                    "title": "Delis"
+                },
+                {
+                    "alias": "pizza",
+                    "title": "Pizza"
+                }
+            ],
+            "rating": 4.0,
+            "coordinates": {
+                "latitude": 38.0255713104506,
+                "longitude": -122.569119930267
+            },
+            "transactions": [
+                "delivery",
+                "pickup"
+            ],
+            "price": "$$",
+            "location": {
+                "address1": "1500 Lucas Valley Rd",
+                "address2": "",
+                "address3": "",
+                "city": "San Rafael",
+                "zip_code": "94903",
+                "country": "US",
+                "state": "CA",
+                "display_address": [
+                    "1500 Lucas Valley Rd",
+                    "San Rafael, CA 94903"
+                ]
+            },
+            "phone": "+14154910547",
+            "display_phone": "(415) 491-0547",
+            "distance": 5870.3291980786535
+        },
+        {
+            "id": "8g6-pxa1FTg25lLLUSIhPA",
+            "alias": "mulberry-street-pizzeria-san-rafael-3",
+            "name": "Mulberry Street Pizzeria",
+            "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/XXtTABUwLT-9xkMDkyHxXA/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/mulberry-street-pizzeria-san-rafael-3?adjust_creative=g6GHAiWKHC12LNduHCT5KQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=g6GHAiWKHC12LNduHCT5KQ",
+            "review_count": 324,
+            "categories": [
+                {
+                    "alias": "pizza",
+                    "title": "Pizza"
+                },
+                {
+                    "alias": "italian",
+                    "title": "Italian"
+                },
+                {
+                    "alias": "salad",
+                    "title": "Salad"
+                }
+            ],
+            "rating": 4.0,
+            "coordinates": {
+                "latitude": 38.0200377160511,
+                "longitude": -122.533498837445
+            },
+            "transactions": [
+                "delivery",
+                "pickup"
+            ],
+            "price": "$$",
+            "location": {
+                "address1": "101 Smith Ranch Rd",
+                "address2": "Ste C",
+                "address3": "",
+                "city": "San Rafael",
+                "zip_code": "94903",
+                "country": "US",
+                "state": "CA",
+                "display_address": [
+                    "101 Smith Ranch Rd",
+                    "Ste C",
+                    "San Rafael, CA 94903"
+                ]
+            },
+            "phone": "+14154727272",
+            "display_phone": "(415) 472-7272",
+            "distance": 6410.826570501024
+        },
+        {
+            "id": "nCralVzKx61vrqt7ZF7dCQ",
+            "alias": "marys-pizza-shack-novato",
+            "name": "Mary's Pizza Shack",
+            "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/OSLXV7EbCLC8tzz6PcVbRA/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/marys-pizza-shack-novato?adjust_creative=g6GHAiWKHC12LNduHCT5KQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=g6GHAiWKHC12LNduHCT5KQ",
+            "review_count": 144,
+            "categories": [
+                {
+                    "alias": "pizza",
+                    "title": "Pizza"
+                },
+                {
+                    "alias": "italian",
+                    "title": "Italian"
+                }
+            ],
+            "rating": 3.0,
+            "coordinates": {
+                "latitude": 38.1227209748576,
+                "longitude": -122.603542215895
+            },
+            "transactions": [
+                "delivery"
+            ],
+            "price": "$$",
+            "location": {
+                "address1": "121 San Marin Dr",
+                "address2": "",
+                "address3": "",
+                "city": "Novato",
+                "zip_code": "94945",
+                "country": "US",
+                "state": "CA",
+                "display_address": [
+                    "121 San Marin Dr",
+                    "Novato, CA 94945"
+                ]
+            },
+            "phone": "+14158976266",
+            "display_phone": "(415) 897-6266",
+            "distance": 6974.734587786093
+        },
+        {
+            "id": "BqrgGkJg_lkocQZNXYluFQ",
+            "alias": "lo-cocos-authentic-italian-pizzeria-san-rafael",
+            "name": "Lo Coco's Authentic Italian Pizzeria",
+            "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/Yd3kmv_0mazcyaCStiqNGg/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/lo-cocos-authentic-italian-pizzeria-san-rafael?adjust_creative=g6GHAiWKHC12LNduHCT5KQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=g6GHAiWKHC12LNduHCT5KQ",
+            "review_count": 214,
+            "categories": [
+                {
+                    "alias": "pizza",
+                    "title": "Pizza"
+                }
+            ],
+            "rating": 4.5,
+            "coordinates": {
+                "latitude": 38.01343,
+                "longitude": -122.56025
+            },
+            "transactions": [],
+            "price": "$$",
+            "location": {
+                "address1": "631 Del Ganado Rd",
+                "address2": "",
+                "address3": "",
+                "city": "San Rafael",
+                "zip_code": "94903",
+                "country": "US",
+                "state": "CA",
+                "display_address": [
+                    "631 Del Ganado Rd",
+                    "San Rafael, CA 94903"
+                ]
+            },
+            "phone": "+14154723323",
+            "display_phone": "(415) 472-3323",
+            "distance": 7019.037576642837
+        },
+        {
+            "id": "p6X5mrmmIxYyKNA7fEd70A",
+            "alias": "round-table-pizza-san-rafael-2",
+            "name": "Round Table Pizza",
+            "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/DCfF6v-C-iv-9TWp8M824g/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/round-table-pizza-san-rafael-2?adjust_creative=g6GHAiWKHC12LNduHCT5KQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=g6GHAiWKHC12LNduHCT5KQ",
+            "review_count": 64,
+            "categories": [
+                {
+                    "alias": "pizza",
+                    "title": "Pizza"
+                },
+                {
+                    "alias": "buffets",
+                    "title": "Buffets"
+                }
+            ],
+            "rating": 3.0,
+            "coordinates": {
+                "latitude": 38.007672,
+                "longitude": -122.546483
+            },
+            "transactions": [
+                "delivery",
+                "pickup"
+            ],
+            "price": "$$",
+            "location": {
+                "address1": "186 Northgate One",
+                "address2": "",
+                "address3": "",
+                "city": "San Rafael",
+                "zip_code": "94903",
+                "country": "US",
+                "state": "CA",
+                "display_address": [
+                    "186 Northgate One",
+                    "San Rafael, CA 94903"
+                ]
+            },
+            "phone": "+14154723232",
+            "display_phone": "(415) 472-3232",
+            "distance": 7625.639854054271
+        },
+        {
+            "id": "OMv23uJQrnWcU4uTH5CVrw",
+            "alias": "stefanos-solar-pizza-san-rafael",
+            "name": "Stefano's Solar Pizza",
+            "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/pfXYs9P_aR3p_7sQHEWsGw/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/stefanos-solar-pizza-san-rafael?adjust_creative=g6GHAiWKHC12LNduHCT5KQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=g6GHAiWKHC12LNduHCT5KQ",
+            "review_count": 33,
+            "categories": [
+                {
+                    "alias": "pizza",
+                    "title": "Pizza"
+                },
+                {
+                    "alias": "italian",
+                    "title": "Italian"
+                }
+            ],
+            "rating": 3.5,
+            "coordinates": {
+                "latitude": 38.00463,
+                "longitude": -122.54071
+            },
+            "transactions": [
+                "delivery",
+                "pickup"
+            ],
+            "location": {
+                "address1": "424 Las Gallinas Ave",
+                "address2": "",
+                "address3": null,
+                "city": "San Rafael",
+                "zip_code": "94903",
+                "country": "US",
+                "state": "CA",
+                "display_address": [
+                    "424 Las Gallinas Ave",
+                    "San Rafael, CA 94903"
+                ]
+            },
+            "phone": "+14154726277",
+            "display_phone": "(415) 472-6277",
+            "distance": 7999.620385790052
+        },
+        {
+            "id": "3524Kedp0Wzeecx7_5AB4Q",
+            "alias": "taco-bell-novato-3",
+            "name": "Taco Bell",
+            "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/IbTkWNwoss4csGIFLJwwHw/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/taco-bell-novato-3?adjust_creative=g6GHAiWKHC12LNduHCT5KQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=g6GHAiWKHC12LNduHCT5KQ",
+            "review_count": 44,
+            "categories": [
+                {
+                    "alias": "hotdogs",
+                    "title": "Fast Food"
+                },
+                {
+                    "alias": "mexican",
+                    "title": "Mexican"
+                }
+            ],
+            "rating": 3.0,
+            "coordinates": {
+                "latitude": 38.0941622820273,
+                "longitude": -122.555200240364
+            },
+            "transactions": [
+                "delivery"
+            ],
+            "price": "$",
+            "location": {
+                "address1": "180 Rowland Blvd",
+                "address2": "",
+                "address3": "",
+                "city": "Novato",
+                "zip_code": "94945",
+                "country": "US",
+                "state": "CA",
+                "display_address": [
+                    "180 Rowland Blvd",
+                    "Novato, CA 94945"
+                ]
+            },
+            "phone": "+14158984003",
+            "display_phone": "(415) 898-4003",
+            "distance": 2047.664825732592
+        },
+        {
+            "id": "R-U1_7DhX-epw8X-sCeztQ",
+            "alias": "tommys-salsa-novato-2",
+            "name": "Tommy's Salsa!",
+            "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/fH30gNcxrP3Ohq2rljjJrw/o.jpg",
+            "is_closed": false,
+            "url": "https://www.yelp.com/biz/tommys-salsa-novato-2?adjust_creative=g6GHAiWKHC12LNduHCT5KQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=g6GHAiWKHC12LNduHCT5KQ",
+            "review_count": 233,
+            "categories": [
+                {
+                    "alias": "mexican",
+                    "title": "Mexican"
+                }
+            ],
+            "rating": 4.0,
+            "coordinates": {
+                "latitude": 38.0987994676479,
+                "longitude": -122.571222519344
+            },
+            "transactions": [
+                "delivery"
+            ],
+            "price": "$$",
+            "location": {
+                "address1": "1553 S Novato Blvd",
+                "address2": "Ste F",
+                "address3": "",
+                "city": "Novato",
+                "zip_code": "94947",
+                "country": "US",
+                "state": "CA",
+                "display_address": [
+                    "1553 S Novato Blvd",
+                    "Ste F",
+                    "Novato, CA 94947"
+                ]
+            },
+            "phone": "+14158981351",
+            "display_phone": "(415) 898-1351",
+            "distance": 3121.0110036646456
+        }
+    ],
+    "total": 23,
+    "region": {
+        "center": {
+            "longitude": -122.55008697509766,
+            "latitude": 38.07619234107205
+        }
+    }
+}

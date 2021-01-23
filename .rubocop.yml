@@ -28,3 +28,6 @@ Style/Documentation:
 
 Style/SingleArgumentDig:
   Enabled: false
+
+Style/RedundantBegin:
+  Enabled: false

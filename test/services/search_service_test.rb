@@ -55,17 +55,21 @@ class SearchServiceTest < ActiveSupport::TestCase
   # call - context: error
   begin
     test 'raise exception if location is not supported' do
+      stub_request_with_unsupported_address
+
+      assert_raises(SearchService::ExternalServiceError) do
+        SearchService.new(user: @user, params: { term: 'coffee', address: 'TMP 13' }).call
+      end
     end
 
     test 'log error if exception is raised' do
-      error_message = "Error::LoginService: \nmessage:\n  Document not found for class User with attributes {:email=>\"whatever@isp.net\"}"\
-        ".\nsummary:\n  When calling User.find_by with a hash of attributes, all attributes provided must match a document in"\
-        " the database or this error will be raised.\nresolution:\n  Search for attributes that are in the database or set the"\
-        ' Mongoid.raise_not_found_error configuration option to false, which will cause a nil to be returned instead of raising this error.'
+      stub_request_with_unsupported_address
+
+      error_message = 'Error::SearchService: SearchService::ExternalServiceError'
 
       Rails.logger.expects(:error).with(error_message)
-      assert_raises(Mongoid::Errors::DocumentNotFound) do
-        SearchService.new(params: { email: 'whatever@isp.net' }).call
+      assert_raises(SearchService::ExternalServiceError) do
+        SearchService.new(user: @user, params: { term: 'coffee', address: 'TMP 13' }).call
       end
     end
   end
@@ -118,5 +122,16 @@ class SearchServiceTest < ActiveSupport::TestCase
                      'Authorization' => 'Bearer iQMoEU6bt1J1D1eJSP8Q8bOLrqcrqoMrqwMfXsx_luLHlKWwphC-JKBcq2cOFjqMtEH7m3k541x87ZmHq_OkBjj2UbtniRIucxnHt-pndMi8bfETN903AiLj68v9X3Yx',
                      'User-Agent' => 'Faraday v1.3.0' })
       .to_return(status: 200, body: body.to_json, headers: {})
+  end
+
+  def stub_request_with_unsupported_address
+    body = { error: { code: 'LOCATION_NOT_FOUND', description: 'Could not execute search, try specifying a more exact location.' } }
+
+    stub_request(:get, 'https://api.yelp.com/v3/businesses/search?location=TMP%2013&radius=8000&sort_by=distance&term=coffee')
+      .with(headers: { 'Accept' => '*/*',
+                       'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+                       'Authorization' => 'Bearer iQMoEU6bt1J1D1eJSP8Q8bOLrqcrqoMrqwMfXsx_luLHlKWwphC-JKBcq2cOFjqMtEH7m3k541x87ZmHq_OkBjj2UbtniRIucxnHt-pndMi8bfETN903AiLj68v9X3Yx',
+                       'User-Agent' => 'Faraday v1.3.0' })
+      .to_return(status: 400, body: body.to_json, headers: {})
   end
 end

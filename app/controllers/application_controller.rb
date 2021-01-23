@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
 
   rescue_from Mongoid::Errors::DocumentNotFound, with: :not_found
   rescue_from Mongoid::Errors::Validations, with: :unprocessable_entity
-  rescue_from SearchService::LocationNotSupported, with: :external_service_error
+  rescue_from SearchService::ExternalServiceError, with: :external_service_error
 
   before_action :authenticate_user, :destroy_session
   helper_method :current_user, :user_logged_in? # so it can be used inside views/helpers

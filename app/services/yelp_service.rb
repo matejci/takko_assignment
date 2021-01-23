@@ -19,6 +19,7 @@ class YelpService
         radius: radius(search_params),
         sort_by: 'distance'
       }
+
       req_params.merge!(prepare_location(user, search_params))
       req_params.merge!(term: search_params[:term]) if search_params[:term].present?
       req_params.merge!(categories: search_params[:categories]) if search_params[:categories].present?
@@ -27,7 +28,7 @@ class YelpService
 
     def prepare_location(user, params)
       if params[:address].present? || params[:postal_code].present?
-        { location: params.except(:term).values.reject(&:blank?).join(', ') }
+        { location: params.except(:term, :categories, :radius).values.reject(&:blank?).join(', ') }
       elsif user.locations.acquired.any?
         location = user.locations.acquired.last
         { latitude: location.latitude, longitude: location.longitude }
