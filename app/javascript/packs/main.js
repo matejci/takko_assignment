@@ -43,6 +43,7 @@ function preventMainFormEnterSubmit(e) {
 
 function search(e) {
   e.preventDefault();
+  $("#loader").show();
 
   $.ajax({
     url: $("#search_form").attr('action'),
@@ -52,9 +53,11 @@ function search(e) {
     dataType: 'script',
     success: function(data, status, xhr) {
       // console.log(data, status, xhr);
+      $("#loader").hide();
     },
     error: function(jqXhr, textStatus, errorMessage) {
       // console.log("Error", errorMessage);
+      $("#loader").hide();
       $('#flash_messages').html('Error: ' + errorMessage).attr('class', 'error').show().fadeOut(5000);
     }
   });
