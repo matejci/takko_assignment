@@ -80,7 +80,7 @@ function handleSeeMoreDiscardBtns(e) {
       // console.log(data, status, xhr);
       if (!vote) {
         var row = element.parents()[6];
-        $(row).hide(1400);
+        $(row).hide(400);
       } else {
         var win = window.open(element.data('redirect-to'), '_blank');
         win.focus();
