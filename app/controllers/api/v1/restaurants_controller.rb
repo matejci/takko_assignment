@@ -8,7 +8,7 @@ module Api
 
         respond_to do |format|
           format.js { render 'home/search.js.erb' }
-          format.json { render json: @search_results.dig(:data), status: :ok }
+          format.json { render json: @search_results, status: :ok }
         end
       end
 

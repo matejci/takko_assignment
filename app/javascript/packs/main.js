@@ -110,7 +110,7 @@ function checkLocation(update_url) {
       headers: prepareHeaders(),
       dataType: 'script',
       success: function(data, status, xhr) {
-        console.log('sucs', data, status, xhr);
+        console.log('Location captured');
       },
       error: function(jqXhr, textStatus, errorMessage) {
         console.log("Error", errorMessage);

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-user = User.first_or_create!(email: 'brucelee@isp.net',
-                             name: 'Bruce',
+user = User.first_or_create!(email: 'user@isp.net',
+                             name: 'User',
                              password: '1234',
                              password_confirmation: '1234',
                              api_token: "#{SecureRandom.urlsafe_base64}#{Digest::SHA1.hexdigest([Time.now, rand].join)}")

@@ -105,9 +105,9 @@ class SearchServiceTest < ActiveSupport::TestCase
 
     stub_request(:get, 'https://api.yelp.com/v3/businesses/search?location=892%20ARLENE%20WAY,%20NOVATO,%20CA,%20USA&radius=8000&sort_by=distance&term=coffee')
       .with(headers: { 'Accept' => '*/*',
-                     'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-                     'Authorization' => 'Bearer iQMoEU6bt1J1D1eJSP8Q8bOLrqcrqoMrqwMfXsx_luLHlKWwphC-JKBcq2cOFjqMtEH7m3k541x87ZmHq_OkBjj2UbtniRIucxnHt-pndMi8bfETN903AiLj68v9X3Yx',
-                     'User-Agent' => 'Faraday v1.3.0' })
+                       'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+                       'Authorization' => 'Bearer iQMoEU6bt1J1D1eJSP8Q8bOLrqcrqoMrqwMfXsx_luLHlKWwphC-JKBcq2cOFjqMtEH7m3k541x87ZmHq_OkBjj2UbtniRIucxnHt-pndMi8bfETN903AiLj68v9X3Yx',
+                       'User-Agent' => 'Faraday v1.3.0' })
       .to_return(status: 200, body: body.to_json, headers: {})
   end
 
@@ -118,9 +118,9 @@ class SearchServiceTest < ActiveSupport::TestCase
 
     stub_request(:get, 'https://api.yelp.com/v3/businesses/search?location=Jeff%20Davis%20County,%20Texas,%20United%20States%20of%20America&radius=8000&sort_by=distance&term=coffee')
       .with(headers: { 'Accept' => '*/*',
-                     'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-                     'Authorization' => 'Bearer iQMoEU6bt1J1D1eJSP8Q8bOLrqcrqoMrqwMfXsx_luLHlKWwphC-JKBcq2cOFjqMtEH7m3k541x87ZmHq_OkBjj2UbtniRIucxnHt-pndMi8bfETN903AiLj68v9X3Yx',
-                     'User-Agent' => 'Faraday v1.3.0' })
+                       'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+                       'Authorization' => 'Bearer iQMoEU6bt1J1D1eJSP8Q8bOLrqcrqoMrqwMfXsx_luLHlKWwphC-JKBcq2cOFjqMtEH7m3k541x87ZmHq_OkBjj2UbtniRIucxnHt-pndMi8bfETN903AiLj68v9X3Yx',
+                       'User-Agent' => 'Faraday v1.3.0' })
       .to_return(status: 200, body: body.to_json, headers: {})
   end
 
