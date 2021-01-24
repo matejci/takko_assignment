@@ -2,6 +2,7 @@
 
 require 'test_helper'
 
+# rubocop:disable Metrics/ClassLength
 class SearchServiceTest < ActiveSupport::TestCase
   setup do
     @user = create(:user)
@@ -96,7 +97,7 @@ class SearchServiceTest < ActiveSupport::TestCase
                                         zip_code: '94945',
                                         country: 'US',
                                         state: 'CA',
-                                        display_address: ['7320 Redwood Blvd', 'Novato, CA 94945']},
+                                        display_address: ['7320 Redwood Blvd', 'Novato, CA 94945'] },
                             phone: '+14158974920',
                             display_phone: '(415) 897-4920',
                             distance: 3778.1206557309465 }],
@@ -106,7 +107,7 @@ class SearchServiceTest < ActiveSupport::TestCase
     stub_request(:get, 'https://api.yelp.com/v3/businesses/search?location=892%20ARLENE%20WAY,%20NOVATO,%20CA,%20USA&radius=8000&sort_by=distance&term=coffee')
       .with(headers: { 'Accept' => '*/*',
                        'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-                       'Authorization' => 'Bearer iQMoEU6bt1J1D1eJSP8Q8bOLrqcrqoMrqwMfXsx_luLHlKWwphC-JKBcq2cOFjqMtEH7m3k541x87ZmHq_OkBjj2UbtniRIucxnHt-pndMi8bfETN903AiLj68v9X3Yx',
+                       'Authorization' => "Bearer #{ENV.fetch('YELP_API_KEY', '')}",
                        'User-Agent' => 'Faraday v1.3.0' })
       .to_return(status: 200, body: body.to_json, headers: {})
   end
@@ -119,7 +120,7 @@ class SearchServiceTest < ActiveSupport::TestCase
     stub_request(:get, 'https://api.yelp.com/v3/businesses/search?location=Jeff%20Davis%20County,%20Texas,%20United%20States%20of%20America&radius=8000&sort_by=distance&term=coffee')
       .with(headers: { 'Accept' => '*/*',
                        'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-                       'Authorization' => 'Bearer iQMoEU6bt1J1D1eJSP8Q8bOLrqcrqoMrqwMfXsx_luLHlKWwphC-JKBcq2cOFjqMtEH7m3k541x87ZmHq_OkBjj2UbtniRIucxnHt-pndMi8bfETN903AiLj68v9X3Yx',
+                       'Authorization' => "Bearer #{ENV.fetch('YELP_API_KEY', '')}",
                        'User-Agent' => 'Faraday v1.3.0' })
       .to_return(status: 200, body: body.to_json, headers: {})
   end
@@ -130,8 +131,9 @@ class SearchServiceTest < ActiveSupport::TestCase
     stub_request(:get, 'https://api.yelp.com/v3/businesses/search?location=TMP%2013&radius=8000&sort_by=distance&term=coffee')
       .with(headers: { 'Accept' => '*/*',
                        'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-                       'Authorization' => 'Bearer iQMoEU6bt1J1D1eJSP8Q8bOLrqcrqoMrqwMfXsx_luLHlKWwphC-JKBcq2cOFjqMtEH7m3k541x87ZmHq_OkBjj2UbtniRIucxnHt-pndMi8bfETN903AiLj68v9X3Yx',
+                       'Authorization' => "Bearer #{ENV.fetch('YELP_API_KEY', '')}",
                        'User-Agent' => 'Faraday v1.3.0' })
       .to_return(status: 400, body: body.to_json, headers: {})
   end
 end
+# rubocop:enable Metrics/ClassLength

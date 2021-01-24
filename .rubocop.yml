@@ -2,7 +2,7 @@ AllCops:
   TargetRubyVersion: 2.7.1
 
 Metrics/LineLength:
-  Max: 150
+  Max: 180
 
 Metrics/MethodLength:
   Max: 50
@@ -30,4 +30,17 @@ Style/SingleArgumentDig:
   Enabled: false
 
 Style/RedundantBegin:
+  Enabled: false
+
+Style/StringLiterals:
+  Exclude:
+    - 'config/**/**'
+    - 'bin/**'
+
+Style/FrozenStringLiteralComment:
+  Exclude:
+    - 'config/**/**'
+    - 'bin/**'
+
+Bundler/OrderedGems:
   Enabled: false

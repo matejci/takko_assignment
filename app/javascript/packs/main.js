@@ -2,10 +2,12 @@
 
 $(document).on('ready turbolinks:load', function() {
   $('#home_btn').on('click', handleHomeBtn);
-  $('#search_form').on('keypress', preventMainFormEnterSubmit);
   $('#search_btn').on('click', search);
   $('body').on('click', '.see_more, .discard', handleSeeMoreDiscardBtns);
   $('#go_to_top_btn').on('click', handleTopBtn);
+  $("#address").on('keypress', function(e) {
+    if (e.keyCode === 13) { return false; }
+  });
 });
 
 function handleHomeBtn(e) {
@@ -35,10 +37,6 @@ function prepareHeaders() {
     'Api-Token': user_data['api_token'],
     'Email': user_data['email']
   };
-}
-
-function preventMainFormEnterSubmit(e) {
-  if (e.keyCode == 13) { return false; }
 }
 
 function search(e) {

@@ -23,7 +23,9 @@ class SearchService
   attr_reader :user, :params
 
   def search
-    yelp_results = YelpService.search(user: user, search_params: params.merge(categories: categories))
+    categories = prepare_categories
+    params.merge!(categories: categories) if categories.present?
+    yelp_results = YelpService.search(user: user, search_params: params)
 
     # TODO, this error is to generic, it should parse Yelp response and raise appropriate custom error
     raise ExternalServiceError unless yelp_results.status.to_s.starts_with?('2')
@@ -59,7 +61,7 @@ class SearchService
     { data: restaurants, message: nil }
   end
 
-  def categories
-    @user.categories.sort_by { |_k, v| v }.reverse.to_h.keys.take(TOP_CATEGORIES_COUNT).join(',')
+  def prepare_categories
+    @user.categories.select { |_k, v| v.positive? }.sort_by { |_k, v| v }.reverse.to_h.keys.take(TOP_CATEGORIES_COUNT).join(',')
   end
 end

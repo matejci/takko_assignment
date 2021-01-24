@@ -16,6 +16,8 @@ $(document).on('ready turbolinks:load', function() {
         var postal_code_index = item['types'].indexOf('postal_code');
         if (postal_code_index != -1) {
           $("#postal_code").val(item['long_name']);
+        } else {
+          $("#postal_code").val('');
         }
       });
     }

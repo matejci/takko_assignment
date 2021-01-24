@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   root to: 'home#index', via: :all
 
   # API
-  namespace :api, defaults: { format: 'json'} do
+  namespace :api, defaults: { format: 'json' } do
     scope module: :v1, constraints: ApiConstraints.new(version: 1, default: true) do
       resources :sessions, only: :create
       resource :session, only: :destroy

@@ -4,6 +4,7 @@ require 'test_helper'
 
 module Api
   module V1
+    # rubocop:disable Metrics/ClassLength
     class RestaurantsControllerTest < ActionDispatch::IntegrationTest
       setup do
         @user = create(:user)
@@ -198,7 +199,7 @@ module Api
         stub_request(:get, 'https://api.yelp.com/v3/businesses/search?location=892%20ARLENE%20WAY,%20NOVATO,%20CA,%20USA&radius=8000&sort_by=distance&term=pizza')
           .with(headers: { 'Accept' => '*/*',
                            'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-                           'Authorization' => 'Bearer iQMoEU6bt1J1D1eJSP8Q8bOLrqcrqoMrqwMfXsx_luLHlKWwphC-JKBcq2cOFjqMtEH7m3k541x87ZmHq_OkBjj2UbtniRIucxnHt-pndMi8bfETN903AiLj68v9X3Yx',
+                           'Authorization' => "Bearer #{ENV.fetch('YELP_API_KEY', '')}",
                            'User-Agent' => 'Faraday v1.3.0' })
           .to_return(status: 200, body: File.read('test/factories/files/yelp_response.json'), headers: {})
       end
@@ -211,7 +212,7 @@ module Api
         stub_request(:get, 'https://api.yelp.com/v3/businesses/search?location=892%20ARLENE%20WAY,%20NOVATO,%20CA,%20USA&radius=8000&sort_by=distance&term=blabla')
           .with(headers: { 'Accept' => '*/*',
                            'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-                           'Authorization' => 'Bearer iQMoEU6bt1J1D1eJSP8Q8bOLrqcrqoMrqwMfXsx_luLHlKWwphC-JKBcq2cOFjqMtEH7m3k541x87ZmHq_OkBjj2UbtniRIucxnHt-pndMi8bfETN903AiLj68v9X3Yx',
+                           'Authorization' => "Bearer #{ENV.fetch('YELP_API_KEY', '')}",
                            'User-Agent' => 'Faraday v1.3.0' })
           .to_return(status: 200, body: body.to_json, headers: {})
       end
@@ -222,10 +223,11 @@ module Api
         stub_request(:get, 'https://api.yelp.com/v3/businesses/search?location=TMP%2013&radius=8000&sort_by=distance&term=pizza')
           .with(headers: { 'Accept' => '*/*',
                            'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-                           'Authorization' => 'Bearer iQMoEU6bt1J1D1eJSP8Q8bOLrqcrqoMrqwMfXsx_luLHlKWwphC-JKBcq2cOFjqMtEH7m3k541x87ZmHq_OkBjj2UbtniRIucxnHt-pndMi8bfETN903AiLj68v9X3Yx',
+                           'Authorization' => "Bearer #{ENV.fetch('YELP_API_KEY', '')}",
                            'User-Agent' => 'Faraday v1.3.0' })
           .to_return(status: 400, body: body.to_json, headers: {})
       end
     end
+    # rubocop:enable Metrics/ClassLength
   end
 end
